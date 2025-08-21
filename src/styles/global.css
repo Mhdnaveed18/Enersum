@@ -1,0 +1,10 @@
+:root{--green-700:#2E7D32;--green-500:#4CAF50;--blue-700:#1565C0;--blue-400:#42A5F5;--neutral-0:#FFFFFF;--neutral-50:#F5F5F5;--neutral-800:#333333;}
+html,body,#root{height:100%;}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+body{background:var(--neutral-50); color:var(--neutral-800); font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;}
+/* Headings use Poppins for a modern, clean accent */
+h1,h2,h3,strong{font-family:"Poppins","Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+/* Smooth edges for Soft UI */
+*{border-radius:0.5rem;}
+/* Utility: remove radius where needed */
+.no-radius{border-radius:0!important;}
