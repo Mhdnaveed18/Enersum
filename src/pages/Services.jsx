@@ -5,8 +5,7 @@ import ImageWithFallback from "../components/ImageWithFallback";
 import imgEnergyAudit from "../assets/services/Energy audit.jpg";
 import imgPowerQuality from "../assets/services/Power Quality Audit.webp";
 import imgElectricalSafety from "../assets/services/Electrical Safety Audit.jpg";
-import imgProjectImplementation from "../assets/services/Energy Efficiency.jpg";
-import imgEnergyEfficiency from "../assets/services/Energy Efficiency.jpg";
+import imgProjectImplementation from "../assets/services/energy efficiency.jpg";
 
 
 function CheckItem({ children }) {
