@@ -9,39 +9,47 @@ export default function ClimateChange() {
                 subtitle="Turn climate risk into strategic advantage with pragmatic, data-driven action."
             />
 
-            {/* Intro */}
+            {/* Overview Section */}
             <section>
                 <Card>
                     <CardTitle>Overview</CardTitle>
                     <CardText>
-                        Climate change is one of the most pressing challenges of our time, affecting everything from
-                        weather patterns to food security. As global temperatures rise, we face unprecedented
-                        challenges that threaten our way of life. But together, we can make a difference. Explore our
-                        site to learn how you can contribute to a sustainable future.
+                        India’s Nationally Determined Contributions (NDCs) outline the nation’s long-term climate
+                        commitments under the Paris Agreement. India aims to reduce the emissions intensity of its GDP
+                        by <strong>33–35% by 2030</strong> (from 2005 levels) while transitioning toward a cleaner and
+                        more resilient economy. These commitments focus on expanding renewable energy capacity,
+                        strengthening carbon sinks, improving resource efficiency, and protecting vulnerable sectors
+                        through climate adaptation.
+                    </CardText>
+
+                    <ul className="mt-3 list-disc list-inside space-y-1 text-sm text-[#333333]/80">
+                        <li>
+                            <strong>Non-Fossil Fuel Capacity:</strong> Target of <strong>500 GW</strong> by 2030 with
+                            50% renewable energy contribution.
+                        </li>
+                        <li>
+                            <strong>Forest Cover:</strong> Creation of <strong>2.5–3 billion tonnes CO₂e</strong> additional
+                            carbon sinks by 2030.
+                        </li>
+                        <li>
+                            <strong>Sustainable Development:</strong> Strong emphasis on urban development, energy
+                            efficiency, and waste management.
+                        </li>
+                        <li>
+                            <strong>Adaptation:</strong> Prioritizing resilience in agriculture, water resources, and
+                            disaster management.
+                        </li>
+                    </ul>
+
+                    <CardText className="mt-3">
+                        India’s strategy is supported by the principles of equity, climate finance, and technology
+                        transfer from developed nations.
                     </CardText>
                 </Card>
             </section>
 
             {/* Content Cards */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* India’s NDCs */}
-                <Card>
-                    <CardTitle>India’s Nationally Determined Contributions (NDCs)</CardTitle>
-                    <CardText>
-                        India's NDCs outline the country's commitments to combat climate change under the Paris
-                        Agreement. As part of its NDCs, India aims to reduce the emissions intensity of its GDP by
-                        33–35% from 2005 levels by 2030.
-                    </CardText>
-                    <ul className="mt-3 list-disc list-inside space-y-1 text-sm text-[#333333]/80">
-                        <li><strong>Non-Fossil Fuel Capacity:</strong> 500 GW target by 2030 with 50% renewable contribution.</li>
-                        <li><strong>Forest Cover:</strong> Additional carbon sinks of 2.5–3 billion tonnes CO₂e by 2030.</li>
-                        <li><strong>Sustainable Development:</strong> Urban development, energy efficiency, and waste management.</li>
-                        <li><strong>Adaptation:</strong> Focus on agriculture, water, and disaster resilience.</li>
-                    </ul>
-                    <CardText className="mt-3">
-                        India's strategy emphasizes technology transfer and climate finance from developed nations.
-                    </CardText>
-                </Card>
 
                 {/* GHG Accounting */}
                 <Card>
@@ -78,7 +86,7 @@ export default function ClimateChange() {
 
                 {/* LCA */}
                 <Card>
-                    <CardTitle>Life Cycle Assessment (LCA) for PCF</CardTitle>
+                    <CardTitle>Life Cycle Assessment (LCA) for Product Carbon Footprint</CardTitle>
                     <CardText>
                         We use ISO 14067 and ISO 14040 methods to analyze carbon footprints via software like SimaPro
                         and OpenLCA.
@@ -105,10 +113,11 @@ export default function ClimateChange() {
                         <li><strong>Investment Advisory:</strong> Align portfolios with sustainability goals.</li>
                     </ul>
                     <CardText className="mt-3">
-                        Each carbon credit = 1 ton CO₂e avoided or removed. Verified offsets support climate and brand
-                        impact.
+                        Each carbon credit equals 1 ton CO₂e avoided or removed. Verified offsets support climate and
+                        brand impact.
                     </CardText>
                 </Card>
+
             </section>
         </div>
     );
