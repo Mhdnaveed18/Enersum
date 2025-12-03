@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div className="space-y-10">
       <Hero
-        title="About Enersum"
+        title="About Us"
         subtitle="We are a sustainability-first partner helping companies transition to clean energy, reduce emissions, and build resilient operations."
       />
 

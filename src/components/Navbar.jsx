@@ -71,7 +71,7 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-1 relative">
                         <NavItem to="/" label="Home" />
-                        <NavItem to="/about" label="About" />
+                        <NavItem to="/about" label="About Us" />
 
                         {/* Services Dropdown */}
                         <div className="relative" ref={servicesRef}>
@@ -106,7 +106,7 @@ export default function Navbar() {
                                         onClick={() => setServicesOpen(false)}
                                         className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
                                     >
-                                        Climate
+                                        Climate Change
                                     </NavLink>
                                     <NavLink
                                         to="/sustainability"
@@ -125,7 +125,7 @@ export default function Navbar() {
                                 onClick={toggleSolutions}
                                 className="px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#1565C0] flex items-center gap-1"
                             >
-                                Solutions
+                                Renewable Energy
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -145,27 +145,20 @@ export default function Navbar() {
                                         onClick={() => setSolutionsOpen(false)}
                                         className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
                                     >
-                                        Solutions
-                                    </NavLink>
-                                    <NavLink
-                                        to="/renewable-energy"
-                                        onClick={() => setSolutionsOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
-                                        Renewable Energy
+                                        RE Consultancy
                                     </NavLink>
                                     <NavLink
                                         to="/service-models"
                                         onClick={() => setSolutionsOpen(false)}
                                         className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
                                     >
-                                        Service Models
+                                        Solar PV
                                     </NavLink>
                                 </div>
                             )}
                         </div>
 
-                        <NavItem to="/contact" label="Contact" />
+                        <NavItem to="/contact" label="Contact Us" />
                     </nav>
 
                     {/* CTA + Mobile Toggle */}
