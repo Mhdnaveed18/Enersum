@@ -56,7 +56,7 @@ export default function Services() {
   return (
     <div className="space-y-10">
       <Hero
-        title="Services"
+        title="Energy Services"
         subtitle="End-to-end sustainability services, from strategy to implementation."
       />
 
