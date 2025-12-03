@@ -30,7 +30,6 @@ export default function Navbar() {
     const servicesRef = useRef(null);
     const solutionsRef = useRef(null);
 
-    // Close dropdowns if clicked outside
     useEffect(() => {
         function handleClickOutside(event) {
             if (servicesRef.current && !servicesRef.current.contains(event.target)) {
@@ -59,7 +58,6 @@ export default function Navbar() {
             <div className="mx-auto container px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between rounded-2xl bg-[#F5F5F5] px-4 py-3 shadow-[8px_8px_16px_#d6d6d6,_-8px_-8px_16px_#ffffff] border border-white/60">
 
-                    {/* Logo */}
                     <Link to="/" className="flex items-center gap-3">
                         <img
                             src={logo}
@@ -68,90 +66,65 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Desktop Navigation */}
+                    {/* Desktop */}
                     <nav className="hidden md:flex items-center gap-1 relative">
                         <NavItem to="/" label="Home" />
                         <NavItem to="/about" label="About Us" />
 
-                        {/* Services Dropdown */}
+                        {/* Services */}
                         <div className="relative" ref={servicesRef}>
                             <button
                                 onClick={toggleServices}
                                 className="px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#1565C0] flex items-center gap-1"
                             >
                                 Services
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={2}
-                                    stroke="currentColor"
-                                    className={`w-4 h-4 transform transition-transform ${servicesOpen ? "rotate-180" : ""}`}
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth={2} stroke="currentColor"
+                                     className={`w-4 h-4 transform transition-transform ${servicesOpen ? "rotate-180" : ""}`}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
 
                             {servicesOpen && (
                                 <div className="absolute left-0 mt-2 w-52 rounded-xl bg-white shadow-lg border border-gray-200 z-10">
-                                    <NavLink
-                                        to="/services"
-                                        onClick={() => setServicesOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
+                                    <NavLink to="/services" onClick={() => setServicesOpen(false)}
+                                             className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100">
                                         Energy Services
                                     </NavLink>
-                                    <NavLink
-                                        to="/climate-change"
-                                        onClick={() => setServicesOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
+                                    <NavLink to="/climate-change" onClick={() => setServicesOpen(false)}
+                                             className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100">
                                         Climate Change
                                     </NavLink>
-                                    <NavLink
-                                        to="/sustainability"
-                                        onClick={() => setServicesOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
+                                    <NavLink to="/sustainability" onClick={() => setServicesOpen(false)}
+                                             className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100">
                                         Sustainability
                                     </NavLink>
                                 </div>
                             )}
                         </div>
 
-                        {/* Solutions Dropdown */}
+                        {/* Solutions */}
                         <div className="relative" ref={solutionsRef}>
                             <button
                                 onClick={toggleSolutions}
                                 className="px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#1565C0] flex items-center gap-1"
                             >
                                 Renewable Energy
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={2}
-                                    stroke="currentColor"
-                                    className={`w-4 h-4 transform transition-transform ${solutionsOpen ? "rotate-180" : ""}`}
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     strokeWidth={2} stroke="currentColor"
+                                     className={`w-4 h-4 transform transition-transform ${solutionsOpen ? "rotate-180" : ""}`}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
 
                             {solutionsOpen && (
                                 <div className="absolute left-0 mt-2 w-52 rounded-xl bg-white shadow-lg border border-gray-200 z-10">
-                                    <NavLink
-                                        to="/solutions"
-                                        onClick={() => setSolutionsOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
+                                    <NavLink to="/solutions" onClick={() => setSolutionsOpen(false)}
+                                             className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100">
                                         RE Consultancy
                                     </NavLink>
-                                    <NavLink
-                                        to="/service-models"
-                                        onClick={() => setSolutionsOpen(false)}
-                                        className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100"
-                                    >
+                                    <NavLink to="/service-models" onClick={() => setSolutionsOpen(false)}
+                                             className="block px-4 py-2 text-sm text-[#333333] hover:bg-gray-100">
                                         Solar PV
                                     </NavLink>
                                 </div>
@@ -161,31 +134,24 @@ export default function Navbar() {
                         <NavItem to="/contact" label="Contact Us" />
                     </nav>
 
-                    {/* CTA + Mobile Toggle */}
+                    {/* CTA */}
                     <div className="flex items-center gap-2">
                         <Link
                             to="/contact"
-                            className="hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white bg-[#2E7D32] hover:bg-[#1b5e20] transition-colors shadow-none"
-                        >
+                            className="hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white bg-[#2E7D32] hover:bg-[#1b5e20] transition-colors">
                             Get in touch
                         </Link>
 
-                        {/* Mobile Menu Toggle */}
+                        {/* Mobile Toggle */}
                         <button
                             aria-label="Toggle Menu"
                             className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl bg-[#F5F5F5] border border-white/60"
                             onClick={() => setOpen((v) => !v)}
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#333333"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="h-5 w-5"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke="#333" strokeWidth="2"
+                                 strokeLinecap="round" strokeLinejoin="round"
+                                 className="h-5 w-5">
                                 <line x1="4" x2="20" y1="6" y2="6" />
                                 <line x1="4" x2="20" y1="12" y2="12" />
                                 <line x1="4" x2="20" y1="18" y2="18" />
@@ -198,34 +164,34 @@ export default function Navbar() {
                 {open && (
                     <div className="md:hidden mt-2 rounded-2xl bg-[#F5F5F5] shadow-[8px_8px_16px_#d6d6d6,_-8px_-8px_16px_#ffffff] border border-white/60 p-2">
                         <div className="flex flex-col gap-1">
-                            <NavItem to="/" label="Home" onClick={() => setOpen(false)} />
-                            <NavItem to="/about" label="About" onClick={() => setOpen(false)} />
 
-                            {/* Services dropdown for mobile */}
+                            <NavItem to="/" label="Home" onClick={() => setOpen(false)} />
+                            <NavItem to="/about" label="About Us" onClick={() => setOpen(false)} />
+
+                            {/* Services Mobile */}
                             <details>
                                 <summary className="cursor-pointer px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#1565C0]">
                                     Services
                                 </summary>
                                 <div className="ml-4 flex flex-col">
                                     <NavItem to="/services" label="Energy Services" onClick={() => setOpen(false)} />
-                                    <NavItem to="/climate-change" label="Climate" onClick={() => setOpen(false)} />
+                                    <NavItem to="/climate-change" label="Climate Change" onClick={() => setOpen(false)} />
                                     <NavItem to="/sustainability" label="Sustainability" onClick={() => setOpen(false)} />
                                 </div>
                             </details>
 
-                            {/* Solutions dropdown for mobile */}
+                            {/* Solutions Mobile */}
                             <details>
                                 <summary className="cursor-pointer px-4 py-2 text-sm font-medium text-[#333333] hover:text-[#1565C0]">
-                                    Solutions
+                                    Renewable Energy
                                 </summary>
                                 <div className="ml-4 flex flex-col">
-                                    <NavItem to="/solutions" label="Solutions" onClick={() => setOpen(false)} />
-                                    <NavItem to="/renewable-energy" label="Renewables" onClick={() => setOpen(false)} />
-                                    <NavItem to="/service-models" label="Service Models" onClick={() => setOpen(false)} />
+                                    <NavItem to="/solutions" label="RE Consultancy" onClick={() => setOpen(false)} />
+                                    <NavItem to="/service-models" label="Solar PV" onClick={() => setOpen(false)} />
                                 </div>
                             </details>
 
-                            <NavItem to="/contact" label="Contact" onClick={() => setOpen(false)} />
+                            <NavItem to="/contact" label="Contact Us" onClick={() => setOpen(false)} />
                         </div>
                     </div>
                 )}
