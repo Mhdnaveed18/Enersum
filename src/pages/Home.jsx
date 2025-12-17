@@ -236,7 +236,7 @@ export default function Home() {
                             name: "Sanjay Tiwari",
                             initials: "ST",
                             review:
-                                "Thank you Mr Mayank & team Emersum for providing a permanent, rational & logical solution for rising electricity bills. Very dedicated team!",
+                                "Thank you Mr Mayank & team Enersum for providing a permanent, rational & logical solution for rising electricity bills. Very dedicated team!",
                         },
                         {
                             name: "Mayank Gupta",
