@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import { Card } from "../components/Card";
 import ImageWithFallback from "../components/ImageWithFallback";
 
-import imgEnergyAudit from "../assets/services/Energy audit.jpg";
+import imgEnergyAudit from "../assets/services/Energy audit.png";
 import imgPowerQuality from "../assets/services/Power Quality Audit.webp";
 import imgElectricalSafety from "../assets/services/Electrical Safety Audit.jpg";
 import imgProjectImplementation from "../assets/services/energy efficiency.jpg";

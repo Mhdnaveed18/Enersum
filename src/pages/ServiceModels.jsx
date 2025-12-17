@@ -128,7 +128,7 @@ export default function ServiceModels() {
                         <div className="mt-3">
                             <h4 className="text-sm font-semibold text-[#2E7D32]">Key Benefits:</h4>
                             <ul className="mt-2 list-disc list-inside space-y-1 text-sm text-[#333333]/80">
-                                <li>No upfront costs</li>
+                                <li>Low upfront costs</li>
                                 <li>Predictable monthly payments</li>
                                 <li>Maintenance handled by our team</li>
                             </ul>
